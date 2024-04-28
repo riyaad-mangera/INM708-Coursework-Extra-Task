@@ -1,8 +1,4 @@
-import torch
 import torch.nn as nn
-from datetime import datetime
-import time
-from torch.nn import functional as F
 
 class ImageNeuralNetwork(nn.Module):
     
@@ -76,8 +72,8 @@ class ImageNeuralNetwork(nn.Module):
             nn.Linear(4096, 4096),
             nn.ReLU(),
             
-            nn.Linear(4096, 3),
-            nn.LogSoftmax(dim = 1)
+            nn.Linear(4096, 15),
+            #nn.LogSoftmax(dim = 1)
 
         )
 
